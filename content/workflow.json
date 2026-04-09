@@ -1,0 +1,13 @@
+[
+    {
+      "name": "ChatGPT",
+      "stage": "Ideation & Writing",
+      "description": "Brainstorm ideas, draft hooks, refine narrative"
+    },
+    {
+      "name": "Canva",
+      "stage": "Design & Production",
+      "description": "Create visuals and layouts"
+    },
+    ...
+  ]

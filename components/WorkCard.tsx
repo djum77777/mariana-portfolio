@@ -1,6 +1,8 @@
+// components/WorkCard.tsx
+import Image from "next/image";
 import Link from "next/link";
 
-export type WorkCardProps = {
+type WorkCardProps = {
   title: string;
   platform: "linkedin" | "x" | "medium";
   views?: number;
@@ -8,19 +10,31 @@ export type WorkCardProps = {
   link: string;
 };
 
-export default function WorkCard({ title, platform, views, role, link }: WorkCardProps) {
+export default function WorkCard({
+  title,
+  platform,
+  views,
+  role,
+  link,
+}: WorkCardProps) {
+  const platformIcons: Record<WorkCardProps["platform"], string> = {
+    linkedin: "/icons/linkedin.svg",
+    x: "/icons/x.svg",
+    medium: "/icons/medium.svg",
+  };
+
   return (
-    <article className="rounded-lg border border-foreground/10 bg-background p-6">
-      <div className="flex items-center justify-between gap-2">
-        <h3 className="text-xl font-semibold text-foreground">{title}</h3>
-        <span className="text-xs uppercase text-foreground/60">{platform}</span>
+    <article className="bg-[#0F0F0F] rounded-lg p-6 hover:shadow-lg transition">
+      <div className="flex items-center gap-3">
+        <Image src={platformIcons[platform]} alt={platform} width={24} height={24} />
+        <h3 className="text-xl font-semibold text-primary">{title}</h3>
       </div>
-      {typeof views === "number" && (
-        <p className="mt-2 text-sm text-foreground/70">{views.toLocaleString()} views</p>
+      {views && (
+        <p className="text-sm text-textPrimary mt-1">{views.toLocaleString()} views</p>
       )}
-      <p className="mt-2 text-sm italic text-foreground/80">{role}</p>
-      <Link href={link} target="_blank" className="mt-4 inline-block text-sm underline">
-        Open post
+      <p className="text-sm text-textPrimary mt-1 italic">{role}</p>
+      <Link href={link} target="_blank" className="mt-3 inline-block text-primary underline">
+        Read more →
       </Link>
     </article>
   );
