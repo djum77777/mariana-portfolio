@@ -2,11 +2,16 @@ import { profile } from "@/content/profile";
 
 export default function Hero() {
   return (
-    <section className="mx-auto flex max-w-6xl flex-col gap-8 px-6 pb-10 pt-16 md:px-8 md:pt-24">
+    <section className="hero-grid mx-auto flex max-w-6xl flex-col gap-8 overflow-hidden rounded-2xl px-6 pb-10 pt-16 md:px-8 md:pt-24">
+      <div className="neon-orb neon-orb--one" />
+      <div className="neon-orb neon-orb--two" />
       <p className="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">{profile.location}</p>
       <h1 className="section-title max-w-4xl text-4xl font-semibold leading-tight text-foreground md:text-6xl">
         {profile.tagline}
       </h1>
+      <p className="max-w-3xl text-sm font-medium uppercase tracking-[0.15em] text-cyan-300/90">
+        {profile.title}
+      </p>
       <p className="max-w-3xl text-base leading-relaxed text-[var(--muted)] md:text-lg">
         {profile.biography}
       </p>
@@ -34,6 +39,17 @@ export default function Hero() {
         >
           Email
         </a>
+      </div>
+      <div className="flex flex-wrap gap-2">
+        <span className="rounded-full border border-foreground/25 px-3 py-1 text-xs text-foreground/80">
+          AI Strategy
+        </span>
+        <span className="rounded-full border border-foreground/25 px-3 py-1 text-xs text-foreground/80">
+          Agentic AI Workflows
+        </span>
+        <span className="rounded-full border border-foreground/25 px-3 py-1 text-xs text-foreground/80">
+          Automation and Analytics
+        </span>
       </div>
     </section>
   );

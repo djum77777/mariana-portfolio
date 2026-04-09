@@ -1,13 +1,32 @@
 [
-    {
-      "name": "ChatGPT",
-      "stage": "Ideation & Writing",
-      "description": "Brainstorm ideas, draft hooks, refine narrative"
-    },
-    {
-      "name": "Canva",
-      "stage": "Design & Production",
-      "description": "Create visuals and layouts"
-    },
-    ...
-  ]
+  {
+    "name": "ChatGPT",
+    "stage": "Ideation and Writing",
+    "description": "Brainstorm concepts, draft hooks, and structure post narratives."
+  },
+  {
+    "name": "Gemini",
+    "stage": "Refinement",
+    "description": "Improve clarity, adjust tone, and expand variations by audience."
+  },
+  {
+    "name": "Canva",
+    "stage": "Design and Production",
+    "description": "Build final visuals and social-ready templates for publishing."
+  },
+  {
+    "name": "Buffer",
+    "stage": "Scheduling",
+    "description": "Queue and publish content across channels with a consistent cadence."
+  },
+  {
+    "name": "Agora Pulse",
+    "stage": "Community and Reporting",
+    "description": "Monitor engagement, manage social inbox, and summarize performance."
+  },
+  {
+    "name": "Monday.com",
+    "stage": "Project Management",
+    "description": "Track campaign timelines, task ownership, and execution status."
+  }
+]
