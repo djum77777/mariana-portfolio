@@ -24,16 +24,16 @@ export default function WorkCard({
   };
 
   return (
-    <article className="bg-[#0F0F0F] rounded-lg p-6 hover:shadow-lg transition">
+    <article className="glass-card rounded-xl p-6 transition hover:-translate-y-0.5">
       <div className="flex items-center gap-3">
         <Image src={platformIcons[platform]} alt={platform} width={24} height={24} />
-        <h3 className="text-xl font-semibold text-primary">{title}</h3>
+        <h3 className="text-xl font-semibold text-foreground">{title}</h3>
       </div>
       {views && (
-        <p className="text-sm text-textPrimary mt-1">{views.toLocaleString()} views</p>
+        <p className="mt-1 text-sm text-[var(--muted)]">{views.toLocaleString()} views</p>
       )}
-      <p className="text-sm text-textPrimary mt-1 italic">{role}</p>
-      <Link href={link} target="_blank" className="mt-3 inline-block text-primary underline">
+      <p className="mt-2 text-sm italic text-foreground/85">{role}</p>
+      <Link href={link} target="_blank" className="mt-3 inline-block text-sm text-cyan-300 underline">
         Read more →
       </Link>
     </article>

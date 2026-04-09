@@ -6,14 +6,16 @@ import GitHubProjects from "@/components/GitHubProjects";
 
 export default function HomePage() {
   return (
-    <>
+    <main className="page-shell">
       <Hero />
-      <section id="selected-work" className="py-12 px-8 bg-background">
-        <h2 className="text-3xl font-bold text-primary mb-6">Selected Work</h2>
-        <WorkList /> {/* This component would map over your posts and render WorkCard for each */}
+      <section id="selected-work" className="mx-auto max-w-6xl px-6 py-12 md:px-8">
+        <h2 className="section-title mb-6 text-3xl font-bold text-foreground md:text-4xl">
+          Selected Work
+        </h2>
+        <WorkList />
       </section>
       <WorkflowSection />
       <GitHubProjects />
-    </>
+    </main>
   );
 }
