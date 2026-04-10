@@ -1,4 +1,3 @@
-// components/WorkCard.tsx
 import Image from "next/image";
 import Link from "next/link";
 
@@ -24,17 +23,20 @@ export default function WorkCard({
   };
 
   return (
-    <article className="glass-card rounded-xl p-6 transition hover:-translate-y-0.5">
+    <article className="glass-card h-full rounded-xl p-6 transition hover:-translate-y-0.5">
       <div className="flex items-center gap-3">
-        <Image src={platformIcons[platform]} alt={platform} width={24} height={24} />
+        <Image src={platformIcons[platform]} alt="" width={24} height={24} aria-hidden="true" />
         <h3 className="text-xl font-semibold text-foreground">{title}</h3>
       </div>
-      {views && (
-        <p className="mt-1 text-sm text-[var(--muted)]">{views.toLocaleString()} views</p>
-      )}
+      {views && <p className="mt-1 text-sm text-[var(--muted)]">{views.toLocaleString()} views</p>}
       <p className="mt-2 text-sm italic text-foreground/85">{role}</p>
-      <Link href={link} target="_blank" className="mt-3 inline-block text-sm text-cyan-300 underline">
-        Read more →
+      <Link
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-3 inline-block text-sm text-cyan-300 underline"
+      >
+        Read more {"->"}
       </Link>
     </article>
   );

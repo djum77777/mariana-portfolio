@@ -1,13 +1,13 @@
 // app/page.tsx
 import Hero from "@/components/Hero";
 import WorkflowSection from "@/components/WorkflowSection";
-import WorkList from "@/components/WorkList"; // a wrapper that maps posts to WorkCard components
+import WorkList from "@/components/WorkList";
 import GitHubProjects from "@/components/GitHubProjects";
 import Capabilities from "@/components/Capabilities";
 
 export default function HomePage() {
   return (
-    <main className="page-shell">
+    <main id="main-content" className="page-shell pb-12">
       <Hero />
       <Capabilities />
       <section id="selected-work" className="mx-auto max-w-6xl px-6 py-12 md:px-8">

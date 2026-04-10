@@ -7,15 +7,18 @@ const capabilities = [
 
 export default function Capabilities() {
   return (
-    <section className="mx-auto max-w-6xl px-6 py-4 md:px-8">
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+    <section aria-labelledby="capabilities-heading" className="mx-auto max-w-6xl px-6 py-4 md:px-8">
+      <h2 id="capabilities-heading" className="sr-only">
+        Core capabilities
+      </h2>
+      <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {capabilities.map((item) => (
-          <div key={item.label} className="glass-card rounded-xl p-4">
+          <li key={item.label} className="glass-card rounded-xl p-4">
             <p className="text-xs uppercase text-[var(--muted)]">{item.label}</p>
             <p className="mt-1 text-lg font-semibold text-foreground">{item.value}</p>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
   );
 }
