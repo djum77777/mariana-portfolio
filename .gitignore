@@ -3,16 +3,12 @@
 # dependencies
 /node_modules
 /.pnp
-<<<<<<< HEAD
-.pnp.js
-=======
 .pnp.*
 .yarn/*
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
->>>>>>> study
 
 # testing
 /coverage
@@ -39,7 +35,6 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
->>>>>>> study
 
 # vercel
 .vercel

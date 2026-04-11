@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# mariana-portfolio
-What I build, what I learn, and what keeps me curious every day.
-=======
 # Mariana Portfolio
 
 Personal portfolio for Mariana Djum, built with Next.js App Router and Tailwind CSS.
@@ -22,6 +18,10 @@ npm run dev
 
 Open `http://localhost:3000`.
 
+## Requirements
+
+- Node.js 22 LTS
+
 ## Scripts
 
 - `npm run dev` - start development server
@@ -35,4 +35,3 @@ Open `http://localhost:3000`.
 - `components/` - UI sections and reusable cards
 - `content/` - portfolio/profile/workflow content data
 - `lib/` - local data utilities
->>>>>>> study
