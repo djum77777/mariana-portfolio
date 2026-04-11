@@ -1,0 +1,31 @@
+[
+  {
+    "id": "ai-agent-demo",
+    "title": "AI Agent Demo",
+    "summary": "A practical demo for orchestrating multi-step AI workflows.",
+    "type": "experiment",
+    "featured": true,
+    "stack": ["Next.js", "TypeScript", "Agentic AI"],
+    "role": "Builder",
+    "liveUrl": ""
+  },
+  {
+    "id": "content-ops-playbook",
+    "title": "Content Ops Playbook",
+    "summary": "A repeatable framework for AI-native content production.",
+    "type": "work",
+    "featured": true,
+    "stack": ["Workflow Design", "Prompt Systems", "Automation"],
+    "role": "Strategist"
+  },
+  {
+    "id": "personal-portfolio",
+    "title": "Mariana Portfolio Site",
+    "summary": "Personal portfolio with dynamic project and content blocks.",
+    "type": "personal",
+    "featured": false,
+    "repoName": "mariana-portfolio",
+    "stack": ["Next.js", "Tailwind CSS"],
+    "role": "Creator"
+  }
+]
