@@ -1,8 +1,8 @@
 const capabilities = [
-  { label: "AI and Agentic AI", value: "Advanced" },
-  { label: "Workflow Automation", value: "End-to-End" },
-  { label: "Social Content Ops", value: "Multi-Platform" },
-  { label: "Execution Model", value: "Strategy + Delivery" },
+  { label: "AI + Agentic Systems", value: "Advanced", detail: "Prompting, agents, orchestration" },
+  { label: "Workflow Automation", value: "End-to-End", detail: "From ideation to reporting loops" },
+  { label: "Content Operations", value: "Multi-Platform", detail: "Channel-native publishing systems" },
+  { label: "Execution Model", value: "Strategy + Delivery", detail: "Own planning and hands-on shipping" },
 ];
 
 export default function Capabilities() {
@@ -13,9 +13,10 @@ export default function Capabilities() {
       </h2>
       <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {capabilities.map((item) => (
-          <li key={item.label} className="glass-card rounded-xl p-4">
-            <p className="text-xs uppercase text-[var(--muted)]">{item.label}</p>
-            <p className="mt-1 text-lg font-semibold text-foreground">{item.value}</p>
+          <li key={item.label} className="capability-card glass-card rounded-xl p-4">
+            <p className="capability-card-value text-lg font-semibold text-foreground">{item.value}</p>
+            <p className="capability-card-label mt-1 text-xs uppercase text-[var(--muted)]">{item.label}</p>
+            <p className="capability-card-detail mt-2 text-xs text-cyan-200/90">{item.detail}</p>
           </li>
         ))}
       </ul>

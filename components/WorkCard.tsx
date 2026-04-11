@@ -23,21 +23,26 @@ export default function WorkCard({
   };
 
   return (
-    <article className="glass-card h-full rounded-xl p-6 transition hover:-translate-y-0.5">
+    <article className="work-card glass-card h-full rounded-xl p-6">
       <div className="flex items-center gap-3">
         <Image src={platformIcons[platform]} alt="" width={24} height={24} aria-hidden="true" />
         <h3 className="text-xl font-semibold text-foreground">{title}</h3>
       </div>
-      {views && <p className="mt-1 text-sm text-[var(--muted)]">{views.toLocaleString()} views</p>}
-      <p className="mt-2 text-sm italic text-foreground/85">{role}</p>
-      <Link
-        href={link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mt-3 inline-block text-sm text-cyan-300 underline"
-      >
-        Read more {"->"}
-      </Link>
+      <p className="work-card-platform mt-1 text-xs uppercase tracking-[0.12em] text-[var(--muted)]">{platform}</p>
+      <div className="work-card-reveal mt-3">
+        {typeof views === "number" && (
+          <p className="text-sm text-[var(--muted)]">{views.toLocaleString()} views</p>
+        )}
+        <p className="mt-1 text-sm italic text-foreground/85">{role}</p>
+        <Link
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-2 inline-block text-sm text-cyan-300 underline"
+        >
+          Read more {"->"}
+        </Link>
+      </div>
     </article>
   );
 }

@@ -1,5 +1,6 @@
 export const profile = {
   name: "Mariana Djum",
+  characterGraphic: "/graphics/mariana-character.png",
   title: "AI-native Content Strategist, Social Media Creator, and Agentic Workflow Builder",
   tagline: "I turn AI and agentic AI into growth systems for content teams.",
   biography: `
