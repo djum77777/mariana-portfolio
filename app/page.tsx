@@ -16,10 +16,10 @@ export default function HomePage() {
       <Capabilities />
       <section id="selected-work" className="section-hud mx-auto max-w-6xl px-6 py-12 md:px-8">
         <div className="section-hud-head">
-          <p className="section-hud-kicker">Live Signals</p>
+          <p className="section-hud-kicker">Proof of Work</p>
           <h2 className="section-title text-3xl font-bold text-foreground md:text-4xl">Selected Work</h2>
           <p className="section-hud-subtitle">
-            Short interface now, deeper context appears while exploring each card.
+            Recent articles, campaign moments, and channel-native social work with context up front.
           </p>
         </div>
         <WorkList />

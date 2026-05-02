@@ -5,7 +5,7 @@ export default function WorkList() {
   return (
     <ul className="grid gap-6 md:grid-cols-2">
       {selectedWork.map((work) => (
-        <li key={work.title}>
+        <li key={work.title} className={work.featured ? "md:col-span-2" : undefined}>
           <WorkCard {...work} />
         </li>
       ))}

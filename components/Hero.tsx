@@ -50,7 +50,7 @@ export default function Hero() {
           </p>
           <div className="hero-bio-panel max-w-3xl">
             <p className="hero-bio-summary text-base leading-relaxed text-[var(--muted)] md:text-lg">
-              AI-native content systems from idea to publishing, with measurable feedback loops.
+              Social media strategy, AI workflows, and reporting systems for fast-moving Web3 products.
             </p>
             <p className="hero-bio-detail mt-2 text-sm leading-relaxed text-foreground/80 md:text-base">
               {profile.biography}
@@ -67,7 +67,7 @@ export default function Hero() {
           >
             <div className="hero-portrait-bubble" role="status" aria-live="polite">
               <span className="hero-portrait-bubble-label">Welcome Aboard</span>
-              <span className="hero-portrait-bubble-text">Hi, I am Mariana, a content creator fluent in AI and agentic systems.</span>
+              <span className="hero-portrait-bubble-text">Hi, I am Mariana, a social media manager fluent in AI, Web3, and agentic systems.</span>
             </div>
             <div className="hero-portrait-media relative aspect-[4/5] overflow-visible rounded-xl">
               <div aria-hidden="true" className="hero-portrait-depth" />
@@ -113,13 +113,13 @@ export default function Hero() {
       </div>
       <div className="relative z-10 flex flex-wrap gap-2">
         <span className="rounded-full border border-foreground/25 px-3 py-1 text-xs text-foreground/80">
-          AI Strategy
+          Hellominds.ai
         </span>
         <span className="rounded-full border border-foreground/25 px-3 py-1 text-xs text-foreground/80">
-          Agentic AI Workflows
+          TOWER
         </span>
         <span className="rounded-full border border-foreground/25 px-3 py-1 text-xs text-foreground/80">
-          Automation and Analytics
+          Social Analytics
         </span>
       </div>
     </section>
