@@ -1,5 +1,5 @@
 const capabilities = [
-  { label: "Current Role", value: "Animoca Brands", detail: "Hellominds.ai and TOWER social channels" },
+  { label: "Current Role", value: "Animoca Brands", detail: "hellominds.ai and TOWER social channels" },
   { label: "Ownership", value: "End-to-End", detail: "Ideas, planning, scheduling, publishing, reporting" },
   { label: "Content Systems", value: "AI-Native", detail: "Agentic workflows and feedback loops" },
   { label: "Audience", value: "Web3 + Gaming", detail: "Channel-native stories for technical communities" },

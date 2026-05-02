@@ -113,7 +113,7 @@ export default function Hero() {
       </div>
       <div className="relative z-10 flex flex-wrap gap-2">
         <span className="rounded-full border border-foreground/25 px-3 py-1 text-xs text-foreground/80">
-          Hellominds.ai
+          hellominds.ai
         </span>
         <span className="rounded-full border border-foreground/25 px-3 py-1 text-xs text-foreground/80">
           TOWER
