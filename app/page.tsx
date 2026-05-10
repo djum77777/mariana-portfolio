@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
+import ContentCalendar from "@/components/ContentCalendar";
 import { profile } from "@/content/profile";
 import { selectedWork } from "@/content/selected-work";
-import workflow from "@/content/workflow.json";
+import { getContentCalendarItems } from "@/lib/notion-content";
 
 const hellomindsUrl = "https://hellominds.ai";
 const towerUrl = "https://www.towerecosystem.com";
@@ -31,16 +32,8 @@ const productCards = [
   },
 ];
 
-const toolBrands: Record<string, string> = {
-  ChatGPT: "ChatGPT",
-  Gemini: "Gemini",
-  Canva: "Canva",
-  Buffer: "Buffer",
-  "Agora Pulse": "Agorapulse",
-  "Monday.com": "monday.com",
-};
-
-export default function HomePage() {
+export default async function HomePage() {
+  const contentItems = await getContentCalendarItems();
   const latestArticle = selectedWork.find((item) => item.featured) ?? selectedWork[0];
   const otherWork = selectedWork.filter((item) => item.title !== latestArticle.title);
 
@@ -58,11 +51,11 @@ export default function HomePage() {
                 <a href="#products" className="rounded-full px-3 py-1.5 font-semibold text-[#6d625b] transition hover:bg-[#241c18] hover:text-white">
                   Brands
                 </a>
+                <a href="#calendar" className="rounded-full px-3 py-1.5 font-semibold text-[#6d625b] transition hover:bg-[#241c18] hover:text-white">
+                  Calendar
+                </a>
                 <a href="#proof" className="rounded-full px-3 py-1.5 font-semibold text-[#6d625b] transition hover:bg-[#241c18] hover:text-white">
                   Work
-                </a>
-                <a href="#system" className="rounded-full px-3 py-1.5 font-semibold text-[#6d625b] transition hover:bg-[#241c18] hover:text-white">
-                  System
                 </a>
               </div>
             </nav>
@@ -185,6 +178,8 @@ export default function HomePage() {
         </div>
       </section>
 
+      <ContentCalendar items={contentItems} />
+
       <section id="proof" className="bg-[#f8efe5] py-16 text-[#241c18] md:py-20">
         <div className="mx-auto max-w-7xl px-5 md:px-10 lg:px-12">
           <div className="mb-8 grid gap-4 md:grid-cols-[minmax(0,0.72fr)_minmax(0,1fr)] md:items-end">
@@ -193,7 +188,7 @@ export default function HomePage() {
               <h2 className="mt-3 text-4xl font-black leading-tight tracking-normal md:text-5xl">Proof without overexplaining.</h2>
             </div>
             <p className="max-w-2xl text-base leading-7 text-[#665b53]">
-              The article gets one strong feature placement here, while supporting work stays compact and easy to scan.
+              A few public pieces stay here as proof points, while the calendar above carries the operating system.
             </p>
           </div>
 
@@ -239,34 +234,6 @@ export default function HomePage() {
               ))}
             </div>
           </div>
-        </div>
-      </section>
-
-      <section id="system" className="bg-[#f3e8ff] py-16 text-[#241c18] md:py-20">
-        <div className="mx-auto max-w-7xl px-5 md:px-10 lg:px-12">
-          <div className="mb-10 flex flex-col justify-between gap-4 md:flex-row md:items-end">
-            <div>
-              <p className="text-sm font-black uppercase tracking-[0.2em] text-[#7c5cb8]">Operating Rhythm</p>
-              <h2 className="mt-3 text-4xl font-black leading-tight tracking-normal md:text-5xl">The engine behind the output.</h2>
-            </div>
-            <p className="max-w-md text-base leading-7 text-[#665b53]">
-              Tool names are shown as clean labels, not imitation logos, so the section stays accurate and tidy.
-            </p>
-          </div>
-
-          <ol className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {workflow.map((step, index) => (
-              <li key={step.name} className="rounded-[2rem] border border-[#241c18]/10 bg-white/58 p-5 shadow-sm backdrop-blur">
-                <div className="flex items-center justify-between gap-3">
-                  <p className="text-sm font-black text-[#7c5cb8]">{String(index + 1).padStart(2, "0")}</p>
-                  <span className={`preview-tool-label preview-tool-label--${index}`}>{toolBrands[step.name] ?? step.name}</span>
-                </div>
-                <h3 className="mt-4 text-2xl font-black">{step.name}</h3>
-                <p className="mt-1 text-xs font-black uppercase tracking-[0.16em] text-[#8b8178]">{step.stage}</p>
-                <p className="mt-4 text-sm leading-6 text-[#665b53]">{step.description}</p>
-              </li>
-            ))}
-          </ol>
         </div>
       </section>
     </main>
