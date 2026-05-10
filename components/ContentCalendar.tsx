@@ -88,8 +88,20 @@ function buildWeekDays(items: ContentCalendarItem[], weekStartKey: string) {
 function formatWeekRange(weekStartKey: string) {
   const start = parseDateOnly(weekStartKey);
   const end = parseDateOnly(addDays(weekStartKey, 6));
-  const formatter = new Intl.DateTimeFormat("en", { month: "short", day: "numeric" });
+  const sameYear = start.getFullYear() === end.getFullYear();
+  const sameMonth = sameYear && start.getMonth() === end.getMonth();
 
+  if (sameMonth) {
+    const month = new Intl.DateTimeFormat("en", { month: "short" }).format(start);
+    return `${month} ${start.getDate()}-${end.getDate()}`;
+  }
+
+  if (sameYear) {
+    const formatter = new Intl.DateTimeFormat("en", { month: "short", day: "numeric" });
+    return `${formatter.format(start)}-${formatter.format(end)}`;
+  }
+
+  const formatter = new Intl.DateTimeFormat("en", { month: "short", day: "numeric", year: "numeric" });
   return `${formatter.format(start)}-${formatter.format(end)}`;
 }
 
@@ -145,12 +157,12 @@ export default function ContentCalendar({ items }: { items: ContentCalendarItem[
   const isCurrentWeek = selectedWeekKey === currentWeekKey;
 
   return (
-    <section id="calendar" className="bg-[#fffaf7] py-16 text-[#241c18] md:py-20">
+    <section id="calendar" className="bg-[#fffaf7] py-14 text-[#241c18] md:py-16">
       <div className="mx-auto grid max-w-7xl gap-8 px-5 md:px-10 lg:grid-cols-[minmax(0,0.82fr)_minmax(520px,1.18fr)] lg:px-12">
         <div className="flex flex-col justify-between gap-8">
           <div>
             <p className="text-sm font-black uppercase tracking-[0.2em] text-[#2f67c7]">Content Rhythm</p>
-            <h2 className="mt-3 max-w-2xl text-4xl font-black leading-tight tracking-normal md:text-5xl">
+            <h2 className="mt-3 max-w-2xl text-3xl font-black leading-tight tracking-normal md:text-[2.65rem]">
               Weekly content, without the clutter.
             </h2>
             <p className="mt-4 max-w-xl text-base leading-7 text-[#665b53]">
