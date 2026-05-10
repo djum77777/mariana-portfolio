@@ -180,7 +180,7 @@ button:focus-visible {
 
 .preview-portrait-panel {
   position: relative;
-  min-height: 292px;
+  min-height: 278px;
   overflow: hidden;
   border-radius: 1.2rem;
   background: linear-gradient(135deg, #ffc9d7, #f8efe5);
@@ -222,14 +222,14 @@ button:focus-visible {
   border-radius: 1.2rem;
   border: 1px solid rgba(36, 28, 24, 0.08);
   background: #fffaf7;
-  padding: 1.1rem;
+  padding: 1rem;
 }
 
 .preview-small-proof {
-  min-height: 108px;
+  min-height: 100px;
   border-radius: 1.2rem;
   border: 1px solid rgba(36, 28, 24, 0.08);
-  padding: 1rem;
+  padding: 0.9rem;
 }
 
 .preview-small-proof span {
@@ -239,8 +239,8 @@ button:focus-visible {
 }
 
 .preview-small-proof p {
-  margin-top: 1.45rem;
-  font-size: 0.9rem;
+  margin-top: 1.25rem;
+  font-size: 0.86rem;
   line-height: 1.25;
   font-weight: 900;
   color: #241c18;

@@ -41,8 +41,8 @@ export default async function HomePage() {
     <main id="main-content" className="preview-pastel min-h-screen bg-[#f8efe5] text-[#241c18]">
       <section className="relative overflow-hidden">
         <div className="preview-pastel-field" aria-hidden="true" />
-        <div className="relative mx-auto grid min-h-[92vh] max-w-7xl gap-10 px-5 py-6 md:px-10 lg:grid-cols-[minmax(0,0.95fr)_minmax(390px,1.05fr)] lg:px-12">
-          <div className="flex flex-col justify-between gap-10">
+        <div className="relative mx-auto grid min-h-[86vh] max-w-7xl gap-8 px-5 py-6 md:px-10 lg:grid-cols-[minmax(0,0.88fr)_minmax(390px,1.12fr)] lg:px-12">
+          <div className="flex flex-col justify-between gap-8">
             <nav className="flex items-center justify-between gap-4 text-sm">
               <Link href="/" className="font-black text-[#241c18]">
                 Mariana Djum
@@ -60,14 +60,14 @@ export default async function HomePage() {
               </div>
             </nav>
 
-            <div className="max-w-3xl">
+            <div className="max-w-2xl">
               <p className="text-sm font-black uppercase tracking-[0.18em] text-[#b94f68]">
                 Social Media Manager at Animoca Brands
               </p>
-              <h1 className="mt-5 max-w-2xl text-4xl font-black leading-[1.06] tracking-normal text-[#241c18] md:text-[3.25rem] lg:text-[3.65rem]">
+              <h1 className="mt-4 max-w-xl text-[2.45rem] font-black leading-[1.1] tracking-normal text-[#241c18] md:text-[2.8rem] lg:text-[3.05rem]">
                 I build social systems for AI and Web3 gaming products.
               </h1>
-              <p className="mt-5 max-w-2xl text-base leading-8 text-[#665b53] md:text-[1.05rem]">
+              <p className="mt-5 max-w-xl text-base leading-7 text-[#665b53] md:text-[1rem]">
                 I lead social operations for{" "}
                 <a
                   href={hellomindsUrl}
@@ -88,7 +88,7 @@ export default async function HomePage() {
                 </a>
                 , connecting strategy, planning, publishing, and reporting into one calm operating rhythm.
               </p>
-              <div className="mt-7 flex flex-wrap gap-3">
+              <div className="mt-6 flex flex-wrap gap-3">
                 <a
                   href="#proof"
                   className="rounded-full bg-[#241c18] px-5 py-3 text-sm font-black text-white transition hover:bg-[#b94f68]"
@@ -106,9 +106,9 @@ export default async function HomePage() {
 
             <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
               {scopeCards.map((item) => (
-                <div key={item.label} className="rounded-2xl border border-[#241c18]/10 bg-white/48 p-4 shadow-sm backdrop-blur">
-                  <p className="text-lg font-black text-[#241c18]">{item.label}</p>
-                  <p className="mt-2 text-sm leading-6 text-[#6d625b]">{item.detail}</p>
+                <div key={item.label} className="rounded-2xl border border-[#241c18]/10 bg-white/48 p-3.5 shadow-sm backdrop-blur">
+                  <p className="text-base font-black text-[#241c18]">{item.label}</p>
+                  <p className="mt-1.5 text-sm leading-5 text-[#6d625b]">{item.detail}</p>
                 </div>
               ))}
             </div>
